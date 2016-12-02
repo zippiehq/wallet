@@ -1,0 +1,39 @@
+* { font-family: roboto }
+
+body { padding: 0; margin: 0 }
+
+.page {
+    position: absolute;
+    x: 0; y: 0;
+    width: 100%
+}
+
+.page h2 {
+    margin-left: 1em;
+}
+
+.page p {
+    width: 90%;
+    margin: 1em 2em;
+    font-size: 14pt;
+}
+
+.page-enter {
+    opacity: 0.01;
+    transform: translate3d(100%, 0, 0);
+}
+.page-enter.page-enter-active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: all 500ms ease-in;
+}
+.page-leave {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+.page-leave.page-leave-active {
+    opacity: 0.01;
+    transform: translate3d(-100%, 0, 0);
+    transition: all 500ms ease-in;
+}
+

@@ -1,0 +1,8 @@
+{
+    "name": "My React Material UI Sandbox",
+    "short_name": "React",
+    "description": "My React Material UI Sandbox Application",
+    "display": "standalone",
+    "orientation": "portrait"
+}
+
