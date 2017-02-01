@@ -85,7 +85,7 @@ export default class QRCodeDialog extends React.Component {
               open={this.state.open}
               onRequestClose={this.doClose}>
                 <div style={{textAlign: 'center'}}>
-                    <a href={this.state.data}>
+                    <a href={'zip:' + this.state.data}>
                         <QRCode
                           value={"zip:"+this.state.data || ''}
                           size={196} />

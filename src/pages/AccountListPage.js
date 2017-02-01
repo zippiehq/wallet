@@ -94,9 +94,8 @@ export default class AccountListPage extends React.Component {
     }
 
     onReceiveRequest(ev, account) {
-        console.log("*** " + account.address)
         ev.stopPropagation()
-        this.qrcode.setData("lct:" + account.address)
+        this.qrcode.setData(account.address)
         this.qrcode.doOpen()
     }
 

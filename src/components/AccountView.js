@@ -89,7 +89,6 @@ export default class AccountView extends React.Component {
 
     onReceiveRequest(ev) {
         ev.stopPropagation()
-        this.qrcode.setData(window.PRIMARY_ADDRESS)
         this.qrcode.doOpen()
     }
     
