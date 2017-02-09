@@ -1,8 +1,13 @@
 {
-    "name": "My React Material UI Sandbox",
-    "short_name": "React",
-    "description": "My React Material UI Sandbox Application",
+    "name": "Zipper Wallet",
+    "short_name": "Wallet",
+    "description": "My Zipper Wallet",
     "display": "standalone",
-    "orientation": "portrait"
+    "orientation": "portrait",
+    "icons": {
+        "16": "images/icons/zipper_icon_16px.png",
+        "48": "images/icons/zipper_icon_48px.png",
+        "128": "images/icons/zipper_icon_128px.png"
+    }
 }
 

@@ -85,11 +85,12 @@ export default class QRCodeDialog extends React.Component {
               open={this.state.open}
               onRequestClose={this.doClose}>
                 <div style={{textAlign: 'center'}}>
-                    <a href={'zip:' + this.state.data}>
-                        <QRCode
-                          value={"zip:"+this.state.data || ''}
-                          size={196} />
-                    </a><br />
+                    <QRCode
+                      value={ addUri }
+                      size={196} />
+                    <br />
+                    <a href={ addUri }>Share Link</a>
+                    <br />
                     <a href={'sms:?body='+escape(addUri)}>
                         via SMS
                     </a><br />

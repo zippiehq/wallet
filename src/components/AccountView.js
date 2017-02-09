@@ -99,6 +99,11 @@ export default class AccountView extends React.Component {
 
     onScanResults(data) {
         console.log(data)
+        if (data.startsWith('http:') || data.startsWith('https:')) {
+            window.location = data
+            return
+        }
+
         if (data.startsWith('zip:')) {
             const account = data.slice(4)
             this.props.router.push('/transactions/create?to='+account)

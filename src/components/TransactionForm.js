@@ -105,6 +105,24 @@ export default class TransactionForm extends React.Component {
     onScanResults(data) {
         console.log(data)
 
+        if (data.startsWith('http:') || data.startsWith('https:')) {
+            const [uri, account] = data.split('=')
+            if (uri.endsWith("account")) {
+                let recipient = this.store.findContactById(account)
+                if (!recipient) {
+                    recipient = {
+                        accountNumber: account,
+                        firstName: 'Unknown',
+                        lastName: '',
+                    }
+                }
+
+                console.log(recipient)
+                this.setState({recipient})
+            }
+            return
+        }
+
         if (data.startsWith("zip:")) {
             let tag = "zip:"
             let account = data.slice(tag.length)
