@@ -71,6 +71,7 @@ const E404 = () => <h1>404 - Resource Not Found</h1>
 
 
 import Vault from 'zipper-vault'
+import secp256k1 from 'zipper-vault/secp256k1'
 import EtherVault from 'zipper-vault/ethereum'
 
 import Web3 from 'web3'
@@ -117,6 +118,8 @@ Vault.init({useOrigin: true})
 .then(function() {
     window.Vault = Vault
     window.EtherVault = EtherVault
+
+    return secp256k1.setupPurpose(Vault, 'auto', 'auto')
 })
 .then(_ => {
     console.log("Retrieving account keys.")
